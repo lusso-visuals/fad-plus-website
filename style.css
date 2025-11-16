@@ -1,0 +1,951 @@
+/* إعدادات أساسية */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    color: #1d1d1d;
+    background-color: #fff;
+    direction: rtl;
+}
+
+/* الحاويات العامة */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ================= HEADER ================= */
+.main-header {
+    background-color: #fff;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    z-index: 1000;
+}
+
+/* الخط العربي */
+@font-face {
+  font-family: "GE SS Two";
+  src: url("fonts/GE_SS_Two_Bold.woff2") format("woff2"),
+       url("fonts/GE_SS_Two_reglear.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* الخط الإنجليزي */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 45px;
+  height: auto;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+  transform: translateY(2px); /* يرفع النص قليلاً لموازنة المحاذاة مع الشعار */
+}
+
+.brand-text .eng {
+  font-family: "Audiowide", sans-serif;
+  font-size: 1.0rem;
+  font-weight: 200;
+  color: #0d2235; /* نفس اللون الأزرق الغامق بالصورة */
+  letter-spacing: 1px;
+}
+
+.brand-text .arabic {
+  font-family: "GE SS Two", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 900;
+  direction: rtl;
+  color: #0d2235;
+  margin-top: 4px;
+  margin-right: 2px;
+}
+
+.brand-text .arabic .plus {
+  color: #ff7a00; /* البرتقالي */
+  font-weight: 900;
+  margin-right: 6px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+
+
+.main-nav a {
+    text-decoration: none;
+    color: #1d1d1d;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+/* إخفاء زر طلب السعر في نسخة الكمبيوتر */
+@media (min-width: 769px) {
+    .main-nav .mobile-quote-btn {
+        display: none;
+    }
+}
+
+.main-nav a.active,
+.main-nav a:hover {
+    color: #ff6b00;
+}
+
+.btn-quote {
+    background-color: #ff6b00;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-quote:hover {
+    background-color: #e35f00;
+}
+
+/* ================= HERO ================= */
+.hero-section {
+    position: relative;
+    background: url('images/hero-truck.jpg') center/cover no-repeat;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* ================= ABOUT ================= */
+.about-us-section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.section-title-contact {
+    color: #FFFFFF;
+    font-size: 28px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    text-align: center;
+    width: 320px;
+    padding-bottom: 25px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 6px 6px 0 0;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin: 15px 0 10px;
+    color: #1d1d1d;
+}
+
+.card p {
+    color: #666;
+    font-size: 15px;
+    padding: 0 15px;
+}
+
+/* بطاقة تتبع الشحنة */
+.track-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(180deg, #ff6b00, #ff8533);
+    color: white;
+}
+
+.track-card h3 {
+    color: white;
+}
+
+.track-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 25px;
+}
+
+.track-box input {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+}
+
+.track-box button {
+    background: #1d1d1d;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* ================= FOOTER ================= */
+.main-footer {
+    background-color: #0d1b2a;
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px; /* إضافة مساحة للأيقونات */
+}
+
+.footer-logo img {
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.footer-logo p {
+    color: #ddd;
+    max-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-logo .social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 90px;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: space-around;
+    flex-direction: row;
+}
+
+.footer-logo .social-links a {
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ddd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-logo .social-links a:hover {
+    background-color: #ff6b00;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.footer-logo .social-links a i {
+    font-size: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+    color: #ff6b00;
+    margin-bottom: 15px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links a {
+    color: #ddd;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ff6b00;
+}
+
+.footer-contact p {
+    color: #ddd;
+    margin-bottom: 8px;
+    direction: ltr;
+    text-align: left;
+}
+
+.footer-social {
+    text-align: center;
+    padding: 15px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+    background-color: #0d1b2a;
+}
+
+.footer-social .social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.footer-social .social-links a {
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-social .social-links a:hover {
+    background-color: #ff6b00;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(255, 107, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer-social .social-links a i {
+    font-size: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px;
+    margin-top: 0;
+    background-color: #08111b;
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* ========== الزر الخاص بالقائمة (هامبرغر) ========== */
+.menu-btn {
+    display: none; /* إخفاء الزر في نسخ الكمبيوتر */
+    width: 30px;
+    height: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 3000; /* فوق العناصر الأخرى */
+}
+
+/* إخفاء الطبقة الشفافة على الشاشات الكبيرة */
+.nav-overlay {
+    display: none !important;
+}
+
+.menu-btn span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #0d2235; /* لون غامق يتناسب مع الهيدر */
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* شكل X عند الفتح */
+.menu-btn.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ========== إظهار القائمة عند الموبايل ========== */
+@media (max-width: 768px) {
+    .menu-btn {
+        display: flex; /* إظهار الزر في نسخ الهواتف */
+    }
+
+    .header-container {
+        position: relative;
+    }
+
+    .main-nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: #ffffff; /* خلفية بيضاء صافية */
+        display: flex;
+        flex-direction: column;
+        padding: 80px 20px 20px;
+        transform: translateX(100%);
+        transition: transform 0.4s ease;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        z-index: 2500;
+        overflow-y: auto;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .main-nav a {
+        display: block;
+        padding: 12px 0;
+        font-size: 1.1rem;
+        border-bottom: 1px solid #eee;
+        width: 100%;
+    }
+
+    .main-nav.nav-open {
+        transform: translateX(0);
+    }
+
+    .btn-quote {
+        display: none; /* إخفاء زر طلب عرض السعر في الموبايل */
+    }
+
+    /* إضافة زر طلب عرض سعر داخل القائمة الجانبية */
+    .mobile-quote-btn {
+        display: block;
+        background-color: #ff6b00;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 20px;
+        transition: 0.3s;
+    }
+    
+    /* تصميم أيقونات السوشيال ميديا للأجهزة المحمولة */
+    .footer-container {
+        flex-direction: column;
+        gap: 35px;
+        margin-bottom: 80px;
+    }
+    
+    .footer-logo {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .footer-social {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        padding: 12px 0;
+    }
+
+    .footer-social .social-links {
+        justify-content: center;
+        gap: 12px;
+    }
+    
+    .footer-social .social-links a {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .footer-social .social-links a i {
+        font-size: 16px;
+    }
+    
+    .footer-links {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .footer-contact {
+        width: 100%;
+    }
+    
+    .footer-contact p {
+        direction: ltr;
+        text-align: center;
+    }
+
+    .mobile-quote-btn:hover {
+        background-color: #e35f00;
+    }
+
+    /* تعديل حجم الشعار في الموبايل */
+    .logo {
+        width: 40px;
+    }
+
+    .brand-text .eng {
+        font-size: 0.9rem;
+    }
+
+    .brand-text .arabic {
+        font-size: 1.0rem;
+    }
+
+    /* تعديل حجم الخط في قسم البطل */
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    /* تعديل بطاقات الخدمات */
+    .card {
+        width: 100%;
+        max-width: 380px;
+    }
+
+    /* تعديل الفوتر */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-logo p {
+        max-width: 100%;
+    }
+
+    /* تحسينات قسم التواصل للموبايل */
+    .contact-section {
+        padding: 60px 0;
+    }
+    
+    .contact-section::before {
+        width: 100%;
+        opacity: 0.5;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .contact-info h2 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .contact-info h2::after {
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .contact-item {
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .contact-item i {
+        margin: 0;
+    }
+
+    .contact-item::before {
+        display: none;
+    }
+
+    .contact-form {
+        padding: 30px 20px;
+    }
+
+    .contact-form h2 {
+        font-size: 24px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 12px 15px;
+        font-size: 16px;
+    }
+
+    .submit-btn {
+        padding: 14px 30px;
+        font-size: 16px;
+    }
+
+/* ========== Sticky Header ========== */
+.main-header.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255,255,255,0.97);
+    box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+    z-index: 1000;
+}
+
+/* ========== Animation عند التمرير ========== */
+section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========== تحسينات تفاعلية ========== */
+.track-box button:hover {
+    background-color: #333;
+}
+
+.track-box button:active {
+    transform: scale(0.98);
+}
+
+.track-box input:focus {
+    box-shadow: 0 0 0 2px rgba(255, 107, 0, 0.5);
+}
+
+/* إضافة تأثيرات للبطاقات */
+.card {
+    overflow: hidden;
+}
+
+.card img {
+    transition: transform 0.5s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+/* ================= CONTACT ================= */
+.contact-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f7f8fa 0%, #e9ecef 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 107, 0, 0.05) 0%, rgba(255, 107, 0, 0.1) 100%);
+    z-index: 0;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #1d1d1d;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.contact-info h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff6b00, #ff8533);
+    border-radius: 2px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    margin-bottom: 35px;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(180deg, #ff6b00, #ff8533);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.contact-item:hover::before {
+    opacity: 1;
+}
+
+.contact-item i {
+    font-size: 26px;
+    color: white;
+}
+
+.contact-item .fas,
+.contact-item .fab {
+    display: inline-flex;
+    /* width: 100%;
+    height: 100%; */
+    text-align: center;
+}
+
+.contact-item:hover i {
+    background-color: #ff6b00;
+    color: white;
+    transform: scale(1.1);
+}
+
+.contact-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #1d1d1d;
+    font-weight: 700;
+}
+
+.contact-item p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-form::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #ff6b00, #ff8533);
+}
+
+.contact-form h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #1d1d1d;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.contact-form h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff6b00, #ff8533);
+    border-radius: 2px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: 'Cairo', sans-serif;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ff6b00;
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(255, 107, 0, 0.1);
+}
+
+.submit-btn {
+    background: linear-gradient(90deg, #ff6b00, #ff8533);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 8px;
+    font-family: 'Cairo', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+}
+
+.submit-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 107, 0, 0.4);
+}
+
+.submit-btn:hover::before {
+    left: 100%;
+}
+
+.submit-btn:active {
+    transform: translateY(1px);
+}
+
+/* تحسينات للقائمة الجانبية */
+.nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1500;
+}
+}

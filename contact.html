@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معنا | FAD PLUS | فاد بلس</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="contact-page.css">
+    <link rel="stylesheet" href="chat-bot.css">
+    <link rel="stylesheet" href="hero.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="Fad-Plus-Logo-icon.svg">
+    <link rel="icon" type="image/svg+xml" href="logo-white.svg">
+    <script defer src="script.js"></script>
+    <script src="chat-bot.js"></script>
+    <script defer src="scroll-header.js"></script>
+    <!-- إضافة مكتبة Font Awesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="Fad-Plus-Logo-icon.svg" alt="FAD PLUS Logo" class="logo">
+                </a>
+                <div class="brand-text">
+                    <div class="eng">FAD PLUS</div>
+                    <div class="arabic">
+                    <span class="fad">فاد</span>
+                    <span class="plus">بلس</span>
+                    </div>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="services.html">خدماتنا</a></li>
+                    <li><a href="index.html">وظائف</a></li>
+                    <li><a href="contact.html" class="active">تواصل معنا</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="btn-quote">اطلب عرض سعر</a>
+        </div>
+        <div class="nav-overlay"></div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay">
+            <img src="contact.png" alt="Background" class="hero-bg-image">
+        </div>
+        <div class="hero-content">
+            <h1>تواصل معنا</h1>
+            <p>نحن هنا لمساعدتك في جميع احتياجاتك اللوجستية</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2 class="section-title">معلومات الاتصال</h2>
+                    <p>تواصل معنا اليوم للحصول على استشارة مجانية وعرض سعر يناسب احتياجاتك</p>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>العنوان</h3>
+                            <p>الرياض، المملكة العربية السعودية</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>الهاتف</h3>
+                            <p dir="ltr">+966 50 123 4567</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>البريد الإلكتروني</h3>
+                            <p>info@fadplus.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>ساعات العمل</h3>
+                            <p>الأحد - الخميس: 8:00 ص - 6:00 م<br>الجمعة - السبت: مغلق</p>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h3>تابعنا على</h3>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <h2 class="section-title-contact">أرسل لنا رسالة</h2>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">الاسم *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">الخدمة المطلوبة</label>
+                            <select id="service" name="service">
+                                <option value="">اختر خدمة</option>
+                                <option value="shipping">الشحن والتوجيه</option>
+                                <option value="heavy-transport">النقل الثقيل</option>
+                                <option value="storage">التخزين</option>
+                                <option value="international-shipping">الشحن الدولي</option>
+                                <option value="express-delivery">النقل السريع</option>
+                                <option value="custom-solutions">حلول لوجستية مخصصة</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">رسالتك *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">إرسال الرسالة</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">موقعنا</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.417818598322!2d46.7216083151831!3d24.71355228412278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDQyJzQ4LjgiTiA0NsKwNDMnMjEuOCJF!5e0!3m2!1sen!2ssa!4v1626154326423!5m2!1sen!2ssa" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">الأسئلة الشائعة</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>ما هي المناطق التي تخدمونها؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نقدم خدماتنا في جميع أنحاء المملكة العربية السعودية، بالإضافة إلى خدمات الشحن الدولي إلى العديد من الدول حول العالم.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>كم يستغرق توصيل الشحنة؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>يعتمد وقت التوصيل على نوع الخدمة ومسافة الشحنة. للشحنات المحلية، عادة ما يستغرق التوصيل من 1 إلى 3 أيام عمل، بينما قد يستغرق الشحن الدولي من 5 إلى 15 يومًا حسب الوجهة.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>هل تقدمون تأمينًا على البضائع؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم، نقدم خيارات تأمين شاملة على البضائع لضمان سلامتها أثناء النقل. يمكنكم طلب التأمين الإضافي عند حجز الشحنة.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>كيف يمكنني تتبع شحنتي؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>بمجرد تسجيل شحنتك، ستحصل على رقم تتبع يمكنك استخدامه على موقعنا الإلكتروني أو تطبيق الهاتف المحمول لمتابعة حالة شحنتك في الوقت الفعلي.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-logo">
+                <img src="logo-white.svg" alt="FAD PLUS Logo">
+                <p>نقدم حلول لوجستية متكاملة ونقل ثقيل موثوق في جميع أنحاء المملكة العربية السعودية.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="services.html">خدماتنا</a></li>
+                    <li><a href="#">وظائف</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>خدماتنا</h3>
+                <ul>
+                    <li><a href="services.html">الشحن والتوجيه</a></li>
+                    <li><a href="services.html">النقل الثقيل</a></li>
+                    <li><a href="services.html">التخزين</a></li>
+                    <li><a href="services.html">النقل السريع</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>معلومات الاتصال</h3>
+                <p><i class="fas fa-map-marker-alt"></i> الرياض، المملكة العربية السعودية</p>
+                <p><i class="fas fa-phone"></i> +966 50 123 4567</p>
+                <p><i class="fas fa-envelope"></i> info@fadplus.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 FAD PLUS. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                const icon = item.querySelector('.fa-chevron-down');
+
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.querySelector('.faq-answer').style.maxHeight = null;
+                            otherItem.querySelector('.fa-chevron-down').style.transform = 'rotate(0deg)';
+                        }
+                    });
+
+                    // Toggle current item
+                    if (answer.style.maxHeight) {
+                        answer.style.maxHeight = null;
+                        icon.style.transform = 'rotate(0deg)';
+                    } else {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- الشات بوت -->
+    <div class="chatbot-container">
+        <div class="chatbot-button">
+            <i class="fas fa-comments"></i>
+        </div>
+        <div class="chatbot-window">
+            <div class="chatbot-header">
+                <div class="chatbot-title">مساعد فاد بلس</div>
+                <button class="chatbot-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chatbot-body">
+                <!-- الرسائل ستظهر هنا -->
+            </div>
+            <div class="chatbot-footer">
+                <div class="chatbot-input-container">
+                    <input type="text" class="chatbot-input" placeholder="اكتب رسالتك هنا...">
+                    <button class="chatbot-send">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

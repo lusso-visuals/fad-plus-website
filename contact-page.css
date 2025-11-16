@@ -1,0 +1,578 @@
+/* ================= CONTACT PAGE ================= */
+/* Contact Section */
+.contact-section {
+    padding: 100px 0;
+    background-color: #fff;
+    position: relative;
+}
+
+.contact-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #ff6b00, #ff8533);
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 60px;
+}
+
+.contact-info {
+    padding-right: 30px;
+}
+
+.contact-info p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: #f7f8fa;
+    padding: 25px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, #ff6b00, #ff8533);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.contact-item:hover::before {
+    opacity: 1;
+}
+
+.contact-icon {
+    width: 65px;
+    height: 65px;
+    /* background: linear-gradient(135deg, #ff6b00, #ff8533); */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    box-shadow: 0 5px 15px rgba(255, 107, 0, 0.2);
+    position: relative;
+    z-index: 2;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.contact-item:hover .contact-icon {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(255, 107, 0, 0.4);
+}
+
+.contact-icon i {
+    font-size: 26px;
+    position: relative;
+    z-index: 2;
+}
+
+/* إصلاح أيقونات Font Awesome */
+.contact-icon .fas,
+.contact-icon .fab {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 65px;
+}
+
+.contact-text h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #1d1d1d;
+    font-weight: 700;
+}
+
+.contact-text p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+.social-links a {
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-links a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff6b00, #ff9500);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.social-links a:hover::before {
+    transform: scale(1);
+}
+
+.social-links a:hover {
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 107, 0, 0.3);
+}
+
+.social-links a i {
+    font-size: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.social-links h3::after {
+    content: "";
+    position: absolute;
+    bottom: 245px;
+    left: 75%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(to right, #ff6b00, #ff8533);
+    border-radius: 3px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 25px;
+    margin-top: 80px;
+    position: relative;
+    z-index: 1;
+    justify-content: center;
+}
+
+.social-icons a {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    color: #666;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.social-icons a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff6b00, #ff8533);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+    transform: scale(0.8);
+    border-radius: 50%;
+}
+
+.social-icons a::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 2;
+}
+
+.social-icons a i {
+    font-size: 24px;
+    position: relative;
+    z-index: 3;
+    transition: transform 0.4s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(255, 107, 0, 0.25);
+}
+
+.social-icons a:hover::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.social-icons a:hover::after {
+    opacity: 1;
+}
+
+.social-icons a:hover i {
+    color: white;
+    transform: rotate(360deg) scale(1.1);
+}
+
+/* Contact Form */
+.contact-form-container {
+    background-color: #0d1b2a;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #1d1d1d;
+    font-size: 16px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    font-family: 'Cairo', sans-serif;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #ff6b00;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #ff6b00, #ff8533);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 107, 0, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Map Section */
+.map-section {
+    padding: 100px 0;
+    position: relative;
+}
+
+.map-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #ff6b00, #ff8533);
+}
+
+.map-container {
+    margin-top: 60px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 100px 0;
+    background-color: #fff;
+    position: relative;
+}
+
+.faq-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #ff6b00, #ff8533);
+}
+
+.faq-container {
+    margin-top: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.faq-item {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #f7f8fa;
+}
+
+.faq-question h3 {
+    font-size: 18px;
+    color: #1d1d1d;
+    font-weight: 700;
+    margin: 0;
+}
+
+.faq-question i {
+    color: #ff6b00;
+    transition: all 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-answer p {
+    padding: 0 25px 25px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 300px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-info {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-section,
+    .map-section,
+    .faq-section {
+        padding: 70px 0;
+    }
+
+    .contact-form-container {
+        padding: 30px 20px;
+    }
+
+    .map-container iframe {
+        height: 300px;
+    }
+
+    .faq-question {
+        padding: 20px;
+    }
+    
+    /* تحسين قسم "تابعنا على" للأجهزة المحمولة */
+    .social-links {
+        padding: 25px 20px;
+        margin-top: 30px;
+    }
+    
+    .social-links h3 {
+        font-size: 20px;
+        margin-bottom: 25px;
+        padding-bottom: 12px;
+    }
+    
+    .social-links h3::after {
+        width: 60px;
+        height: 2.5px;
+    }
+    
+    .social-icons {
+        gap: 20px;
+        justify-content: center;
+        margin: 40px auto 0;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .social-icons a {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .social-icons a i {
+        font-size: 20px;
+    }
+    
+    .social-icons a:hover {
+        transform: translateY(-8px) scale(1.05);
+    }
+}
+
+/* تحسينات إضافية للأجهزة المحمولة ذات الشاشات الأصغر */
+@media (max-width: 480px) {
+    .social-links {
+        padding: 20px 15px;
+        margin-top: 25px;
+    }
+    
+    .social-links h3 {
+        font-size: 20px;
+        margin-bottom: 2px;
+        padding-bottom: 2px;
+    }
+    
+    .social-links h3::after {
+        width: 50px;
+        height: 2px;
+    }
+    
+    .social-icons {
+        gap: 15px;
+        justify-content: center;
+        margin: 35px auto 0;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .social-icons a {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .social-icons a i {
+        font-size: 18px;
+    }
+    
+    .social-icons a:hover {
+        transform: translateY(-6px) scale(1.05);
+    }
+}
+
+    .faq-answer p {
+        padding: 0 20px 20px;
+    }
+
+    .contact-item {
+        padding: 20px;
+    }
+

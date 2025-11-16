@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 366.25 499.52">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Audiowide-Regular, Audiowide;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #0d2039;
+      }
+
+      .cls-1, .cls-3 {
+        font-size: 60px;
+      }
+
+      .cls-4 {
+        fill: #f57f20;
+      }
+
+      .cls-5 {
+        fill: #7d7d7d;
+      }
+
+      .cls-3 {
+        fill: #0e2038;
+        font-family: GESSTwoMedium-Medium, 'GE SS Two';
+        font-weight: 500;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <g>
+        <path class="cls-2" d="M254.67,33.14h-89.87s-47.66,2.97-54.2,48.94l-.74,111.51,31.48-35.87v-33.17h20.16l25.71-31.2-45.46.46s-1.42-23.19,22.18-28.72h63.24l27.51-31.96Z"/>
+        <g>
+          <polygon class="cls-4" points="154.29 275.35 185.33 275.47 208.69 212.47 185.1 212.47 154.29 275.35"/>
+          <polygon class="cls-4" points="194.44 194.17 214.95 194.17 231.55 149.1 216.58 149.1 194.44 194.17"/>
+          <polygon class="cls-4" points="223.93 134.59 236.6 135.14 253.45 89.94 245.91 90.11 223.93 134.59"/>
+          <polygon class="cls-4" points="250.56 79.93 257.44 79.93 275.44 30.25 250.56 79.93"/>
+        </g>
+        <polygon class="cls-2" points="61.59 274.9 107.17 274.9 271.31 31.37 263.46 31.37 61.59 274.9"/>
+        <polygon class="cls-5" points="287.99 0 241.11 27.92 263.46 31.37 271.31 31.37 282.17 15.25 236 274.9 276.24 274.9 283.73 38.94 304.66 50.92 287.99 0"/>
+      </g>
+      <g>
+        <text class="cls-3" transform="translate(206.97 474.62) scale(1.05 1)"><tspan x="0" y="0">فــاد </tspan></text>
+        <text class="cls-1" transform="translate(0 393.19)"><tspan x="0" y="0">FAD PLUS</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

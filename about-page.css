@@ -1,0 +1,316 @@
+/* ================= ABOUT PAGE ================= */
+/* About Content Section */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.about-text {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+.about-image {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.03);
+}
+
+/* Mission & Vision Section */
+.mission-vision-section {
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-vision-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #ff6b00, #ff8533);
+}
+
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.mission-vision-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-vision-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #ff6b00, #ff8533);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease;
+}
+
+.mission-vision-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.mission-vision-card:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.icon-container {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, rgba(255, 107, 0, 0.1), rgba(255, 133, 51, 0.05));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    transition: all 0.3s ease;
+}
+
+.mission-vision-card:hover .icon-container {
+    background: linear-gradient(135deg, #ff6b00, #ff8533);
+    transform: scale(1.1);
+}
+
+.icon-container i {
+    font-size: 32px;
+    color: #ff6b00;
+    transition: all 0.3s ease;
+}
+
+.mission-vision-card:hover .icon-container i {
+    color: white;
+    transform: scale(1.1);
+}
+
+.mission-vision-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #1d1d1d;
+    font-weight: 700;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.mission-vision-card:hover h3 {
+    color: #ff6b00;
+}
+
+.mission-vision-card p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Team Section */
+.team-section {
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.team-member {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.member-photo {
+    height: 280px;
+    overflow: hidden;
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.team-member:hover .member-photo img {
+    transform: scale(1.05);
+}
+
+.member-info {
+    padding: 30px;
+    text-align: center;
+}
+
+.member-info h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    color: #1d1d1d;
+    font-weight: 700;
+}
+
+.position {
+    color: #ff6b00;
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.member-info p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Statistics Section */
+.statistics-section {
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.statistics-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #ff6b00, #ff8533);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.stat-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, rgba(255, 107, 0, 0.1), rgba(255, 133, 51, 0.05));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover .stat-icon {
+    background: linear-gradient(135deg, #ff6b00, #ff8533);
+    transform: scale(1.1);
+}
+
+.stat-icon i {
+    font-size: 28px;
+    color: #ff6b00;
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover .stat-icon i {
+    color: white;
+    transform: scale(1.1);
+}
+
+.stat-number {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .mission-vision-section,
+    .team-section,
+    .statistics-section {
+        padding: 70px 0;
+    }
+
+    .mission-vision-grid,
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .stat-number {
+        font-size: 30px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+}
